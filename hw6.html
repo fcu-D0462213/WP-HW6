@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+	$("#xueyuan").change(function(){
+		$("#xisuo").empty();
+		var choose=$("#xueyuan").val();
+		var shang = ["會計學系","國際經營與貿易學系","國際經營與貿易學系國際企業管理全英語學士班","財稅學系","合作經濟暨社會事業經營學系","統計學系","經濟學系","企業管理學系","行銷學系","國際企業管理學士學位學程(英語專班)","商學進修學士學位學程","財經法律研究所","科技管理碩士學位學程","產業碩士專班","商學專業碩士在職學位學程","商學博士學位學程"];
+		var gong = ["機械與電腦輔助工程學系","纖維與複合材料學系","工業工程與系統管理學系","化學工程學系","航太與系統工程學系","精密系統設計學士學位學程","電聲碩士學位學程","綠色能源科技碩士學位學程","創意設計碩士學位學程","材料與製造工程碩士在職專班","智能製造與工程管理碩士在職學位學程","機械與航空工程博士學位學程"];
+		var jianshe = ["土木工程學系","水利工程與資源保育學系","都市計畫與空間資訊學系","運輸與物流學系","土地管理學系","景觀與遊憩碩士學位學程","專案管理碩士在職學位學程","建設碩士在職學位學程","土木水利工程與建設規劃博士學位學程"];
+		var jinrong = ["風險管理與保險學系","財務金融學系","財務工程與精算學士學位學程","金融碩士在職學位學程","金融博士學位學程"];
+		var jianzhu = ["建築專業學院學士班","建築學士學位學程","室內設計學士學位學程","室內設計進修學士班","創新設計學士學位學程","建築碩士學位學程","建築碩士在職學位學程"];
+		var guoke = ["澳洲墨爾本皇家理工大學商學與創新雙學士學位學程","美國聖荷西州立大學商學大數據分析雙學士學位學程","美國普渡大學電機資訊雙學士學位學程","西班牙薩拉戈薩大學物流供應鏈管理與創新創業雙碩士學位學程","國際經營管理碩士學位學程"];
+		var zidian = ["資訊工程學系","電機工程學系","電子工程學系","自動控制工程學系","通訊工程學系","資電不分系榮譽班","資訊電機工程碩士在職學位學程","產業研發碩士專班","生醫資訊暨生醫工程碩士學位學程","視光科技碩士在職學位學程","電機與通訊工程博士學位學程","智慧聯網產業博士學位學程"];
+		var renwen = ["中國文學系","外國語文學系","歷史與文物研究所","公共事務與社會創新研究所"];
+		var li =["應用數學系","環境工程與科學學系","材料科學與工程學系","光電學系","微積分教學中心","物理教學研究中心"];
+		var jingying=["經營管理碩士在職學位學程","電子商務碩士在職專班"];
+		var kua=["通識教育中心","雲端學院","外語教學中心","國語文教學中心","全校國際生大一不分系學士班"];
+		switch (choose) {
+			case '1':
+				for(var i=0;i<shang.length;i++){
+					$("#xisuo").append('<option>'+shang[i]+'</option>');
+				}
+				break;
+			case '2':
+				for(var i=0;i<gong.length;i++){
+					$("#xisuo").append('<option>'+gong[i]+'</option>');
+				}
+				break;
+			case '3':
+				for(var i=0;i<jianshe.length;i++){
+					$("#xisuo").append('<option>'+jianshe[i]+'</option>');
+				}
+				break;
+			case '4':
+				for(var i=0;i<jinrong.length;i++){
+					$("#xisuo").append('<option>'+jinrong[i]+'</option>');
+				}
+				break;
+			case '5':
+				for(var i=0;i<jianzhu.length;i++){
+					$("#xisuo").append('<option>'+jianzhu[i]+'</option>');
+				}
+				break;
+			case '6':
+				for(var i=0;i<guoke.length;i++){
+					$("#xisuo").append('<option>'+guoke[i]+'</option>');
+				}
+				break;
+			case '7':
+				for(var i=0;i<zidian.length;i++){
+					$("#xisuo").append('<option>'+zidian[i]+'</option>');
+				}
+				break;
+			case '8':
+				for(var i=0;i<renwen.length;i++){
+					$("#xisuo").append('<option>'+renwen[i]+'</option>');
+				}
+				break;
+			case '9':
+				for(var i=0;i<li.length;i++){
+					$("#xisuo").append('<option>'+li[i]+'</option>');
+				}
+				break;
+			case '10':
+				for(var i=0;i<jingying.length;i++){
+					$("#xisuo").append('<option>'+jingying[i]+'</option>');
+				}
+				break;
+			case '11':
+				for(var i=0;i<kua.length;i++){
+					$("#xisuo").append('<option>'+kua[i]+'</option>');
+				}
+				break;
+		}
+	});
+});
+</script>
+</head>
+<body>
+	<p>請選擇學院:</p>
+	<select id="xueyuan">
+		<option value='1'>商學院</option>
+		<option value='2'>工學院</option>
+		<option value='3'>建設學院</option>
+		<option value='4'>金融學院</option>
+		<option value='5'>建築專業學院</option>
+		<option value='6'>國際科技與管理學院</option>
+		<option value='7'>資電學院</option>
+		<option value='8'>人文社會學院</option>
+		<option value='9'>理學院</option>
+		<option value='10'>經營管理學院</option>
+		<option value='11'>跨科系學習</option>
+	</select>
+	<p>	當你選擇學院後，下列選單會列出屬於該學院的所有科系: </p>
+	<select id="xisuo">
+		<option>會計學系</option>
+		<option>國際經營與貿易學系</option>
+		<option>國際經營與貿易學系國際企業管理全英語學士班</option>
+		<option>財稅學系</option>
+		<option>合作經濟暨社會事業經營學系</option>
+		<option>統計學系</option>
+		<option>經濟學系</option>
+		<option>行銷學系</option>
+		<option>國際企業管理學士學位學程(英語專班)</option>
+		<option>商學進修學士學位學程</option>
+		<option>財經法律研究所</option>
+		<option>科技管理碩士學位學程</option>
+		<option>產業碩士專班</option>
+		<option>商學專業碩士在職學位學程</option>
+		<option>商學博士學位學程</option>
+	</select>
+
+</body>
+</html>
